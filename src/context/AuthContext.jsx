@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
 		const token = JSON.parse(dataUser)?.token;
 
 		if (token) {
-			console.log(token);
+			//console.log(token);
 			setIsAuthenticated(true);
 		} else {
 			setIsAuthenticated(false);
