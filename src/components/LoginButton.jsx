@@ -29,6 +29,7 @@ const LoginButton = () => {
 			}
 
 		} catch (error) {
+			console.log("Error: ", error);
 			console.error('Error mientras solito el código a Google: ', error)
 		}
 	}

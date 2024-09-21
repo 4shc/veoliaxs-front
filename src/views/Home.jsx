@@ -5,13 +5,13 @@ const Home = () => {
 	const [data, setData] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPages, setTotalPages] = useState(0);
-	const tag = "PTAR_EMPRESA_LACTEA_SOL_SUSPENDIDOS_CAF"; // El tag que quieres filtrar
+	const tag = import.meta.env.VITE_TAG_PTAR_EMPRESA_LACTEA;
+	const URL_QUERY_DB = import.meta.env.VITE_URL_QUERY_PTAR_EMPRESA_LACTEA;
 
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await axios.get(
-					"https://project-veolia.onrender.com",
+				const response = await axios.get(`${URL_QUERY_DB}/api/getFileData`, 
 					{
 						params: {
 							tag,

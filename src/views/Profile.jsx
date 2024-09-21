@@ -5,13 +5,13 @@ const Profile = () => {
 	const [data, setData] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPages, setTotalPages] = useState(0);
-	const tag = "HINTER_CAR_CH1_REF_SUCT_TEMP"; // El tag que quieres filtrar
+	const tag = import.meta.env.VITE_TAG_PTAR_HINTER_CAR;
+	const URL_QUERY_DB = import.meta.env.VITE_URL_QUERY_PTAR_HINTER_CAR;
 
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await axios.get(
-					"https://project-veolia.onrender.com",
+				const response = await axios.get(`${URL_QUERY_DB}/api/getFileData`,
 					{
 						params: {
 							tag,

@@ -7,5 +7,4 @@ const api = axios.create({
 	},
 });
 
-export const googleAuth = (code) => api.get(`/google?code=${code}`);
-
+export const googleAuth = async (code) => await api.get(`/google?code=${code}`);
