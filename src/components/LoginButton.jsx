@@ -2,6 +2,7 @@ import { useGoogleLogin } from "@react-oauth/google"
 import { googleAuth } from "../api/axiosInstance";
 import { useNavigate } from "react-router-dom";
 import logoIcon from './img/logoIcon.png'
+import logoBlacK from './img/logoBlacK.png'
 
 const LoginButton = () => {
 
@@ -40,7 +41,7 @@ const LoginButton = () => {
 
 	return (
 		<>
-			<nav className="bg-white border-gray-200 dark:bg-gray-900">
+			<nav className="bg-black-grade border-gray-200 dark:bg-gray-900">
 				<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 					<a
 						className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -52,16 +53,22 @@ const LoginButton = () => {
 							src={logoIcon}
 						/>
 						<span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-							VeoliaX´s
+							VEOLIA X´S
 						</span>
 					</a>
 					<div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
 						<button
-							className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+							className="btn-access-google text-green-xs  text-sm px-4 py-2 text-center "
 							onClick={handleLogin}
 							type="button"
 						>
-							Acceder con Google
+							Login with
+							<span className="blu"> G</span>
+							<span className="red">o</span>
+							<span className="yel">o</span>
+							<span className="blu">g</span>
+							<span className="gre">l</span>
+							<span className="red">e</span>
 						</button>
 						<button
 							aria-controls="navbar-cta"
@@ -94,11 +101,11 @@ const LoginButton = () => {
 						className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
 						id="navbar-cta"
 					>
-						<ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+						<ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  ">
 							<li>
 								<a
 									aria-current="page"
-									className="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
+									className="block  py-2 px-3 md:p-0  rounded  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 "
 									href="#"
 								>
 									Home
@@ -106,7 +113,7 @@ const LoginButton = () => {
 							</li>
 							<li>
 								<a
-									className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+									className="block py-2 px-3 md:p-0  rounded  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
 									href="#"
 								>
 									About
@@ -114,7 +121,7 @@ const LoginButton = () => {
 							</li>
 							<li>
 								<a
-									className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+									className="block py-2 px-3 md:p-0  rounded  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
 									href="#"
 								>
 									Services
@@ -122,7 +129,7 @@ const LoginButton = () => {
 							</li>
 							<li>
 								<a
-									className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+									className="block py-2 px-3 md:p-0  rounded  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
 									href="#"
 								>
 									Contact
@@ -132,6 +139,23 @@ const LoginButton = () => {
 					</div>
 				</div>
 			</nav>
+			<div className="contenedor flex flex-col items-center justify-center h-screen">
+			<img className="imgLogos" src={logoBlacK} alt="" />
+				<iframe className="vidIframe"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowFullScreen
+					frameBorder="0"
+					height="100%"
+					referrerPolicy="strict-origin-when-cross-origin"
+					src="https://www.youtube.com/embed/uiYKSXS-h3E?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1&cc_load_policy=0&mute=1"
+					title="Veolia Latam: Tu aliado en la ruta hacia la descarbonización"
+					width="100%"
+				/>
+
+
+
+				
+			</div>
 
 		</>
 	);

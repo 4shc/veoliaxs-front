@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-1: #e71b24; /* Logo */
+  --color-2: #2c2c2c; /*Header */
+  --color-3: #d9d1c8; /*Head page */
+  --color-4: #9c9e9f;
+  --color-5: #ffd616; /* Contact */
+  --color-6: #186202; /* Banner principal */
+  --color-7: #002d62;
+  --color-8: #7197ca;
+  --color-9: #7fb8ac;
+  --color-10: #002d62;
+  --color-11: #f2f2f2
+}
+
+/* Styles Nav*/
+.bg-black-grade{
+  background: linear-gradient(90deg, #2c2c2c 0%, #9c9e9f 50%, #2c2c2c 100%);
+}
+
+.text-green-xs{
+  color: var(--color-6);
+}
+
+.btn-access-google{
+  background-color: #fff;
+  font-weight: 600;
+  border-radius: 3em;
+  color: var(--color-6);
+  transition: background-color ease-in .2s;
+}
+.btn-access-google:hover{
+  background-color: var(--color-2);
+  color: var(--color-4);
+  
+}
+/*google style btn*/
+.blu{
+  color: #488af4c9;
+}
+.red{
+  color: #eb4a3bd0;  
+}
+.yel{
+  color: #fbbf0dcc;
+}
+.gre{
+  color:#3aab58c4 ;
+}
+
+.contenedor{
+  justify-content: flex-start;
+  position: relative;
+}
+
+ /*vidIframe*/
+.vidIframe{
+  position: absolute;
+  z-index: -1;
+  filter: sepia(77%);
+  opacity: .5;
+}
+
+.imgLogos{
+  margin: auto 0;
+  opacity: .5;
+}
